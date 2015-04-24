@@ -8,7 +8,6 @@ RUN apt-get update && \
 	git-core
 RUN apt-get clean
 
-
 WORKDIR /opt
 RUN git clone https://github.com/RuudBurger/CouchPotatoServer.git
 
