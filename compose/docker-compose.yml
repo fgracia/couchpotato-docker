@@ -1,0 +1,8 @@
+couchpotato:
+  image: fgracia/couchpotato
+  ports:
+   - "5050:5050"
+  volumes:
+   - /etc/localtime:/etc/localtime:ro
+   - /<local-data-for-database-and-logs>:/data
+  restart: always
