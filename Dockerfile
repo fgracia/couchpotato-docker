@@ -17,6 +17,6 @@ RUN chmod +x /startup.sh
 
 EXPOSE 5050
 
-VOLUME ["/opt"]
+VOLUME ["/opt", "/root/.couchpotato"]
 
 CMD ["/startup.sh"]
