@@ -6,7 +6,7 @@ This is a Dockerfile to deploy CouchPotato Server.
 
 Here's how you can run the container :
 
- docker run --restart=always --name couchpotato -d -p 5050:5050 -v /etc/localtime:/etc/localtime:ro -v /<local-directory-for-config-files>:/data fgracia/couchpotato
+ docker run --restart=always --name couchpotato -d -p 5050:5050 -v /etc/localtime:/etc/localtime:ro -v /<local-directory-for-config-files>:/root/.couchpotato fgracia/couchpotato
 
 Where :
 
@@ -20,7 +20,7 @@ Where :
  ** maps the default HTTP port
  * *-v /etc/localtime:/etc/localtime:ro*
  ** sets the UTC like the host (optional)
- * *-v /<local-directory-for-config-files>:/data*
+ * *-v /<local-directory-for-config-files>:/root/.couchpotato*
  ** if you want persistent data files, you can choose a local directory (optional)
 
 If you use post-processing actions, you may need to mount other data volumes.
