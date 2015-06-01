@@ -9,7 +9,7 @@ RUN apt-get update && \
 RUN apt-get clean
 
 WORKDIR /opt
-RUN git clone https://github.com/RuudBurger/CouchPotatoServer.git
+RUN git clone https://github.com/sarakha63/CouchPotatoServer.git
 
 COPY ./startup.sh /startup.sh
 RUN chmod +x /startup.sh
