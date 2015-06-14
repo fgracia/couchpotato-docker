@@ -17,7 +17,7 @@ Where :
 * **-d** : daemon mode
 * **-p 5050:5050** : maps the default HTTP port
 * **-v /etc/localtime:/etc/localtime:ro** : sets the UTC like the host (optional)
-* **-v /<local-directory-for-config-files>:/root/.couchpotato** : if you want persistent data files, you can choose a local directory (optional)
+* **-v /local-directory-for-config-files:/root/.couchpotato** : if you want persistent data files, you can choose a local directory (optional)
 
 If you use post-processing actions, you may need to mount other data volumes.
 
