@@ -12,18 +12,12 @@ docker run --restart=always --name couchpotato -d -p 5050:5050 -v /etc/localtime
 
 Where :
 
- * *--restart=always*
- ** allows to automatically restart the container if it stops, of if the host reboots (optional)
- * *--name couchpotato*
- ** you can choose the name you want
- * *-d*
- ** daemon mode
- * *-p 5050:5050*
- ** maps the default HTTP port
- * *-v /etc/localtime:/etc/localtime:ro*
- ** sets the UTC like the host (optional)
- * *-v /<local-directory-for-config-files>:/root/.couchpotato*
- ** if you want persistent data files, you can choose a local directory (optional)
+* **--restart=always** : allows to automatically restart the container if it stops, of if the host reboots (optional)
+* **--name couchpotato** : you can choose the name you want
+* **-d** : daemon mode
+* **-p 5050:5050** : maps the default HTTP port
+* **-v /etc/localtime:/etc/localtime:ro** : sets the UTC like the host (optional)
+* **-v /<local-directory-for-config-files>:/root/.couchpotato** : if you want persistent data files, you can choose a local directory (optional)
 
 If you use post-processing actions, you may need to mount other data volumes.
 
