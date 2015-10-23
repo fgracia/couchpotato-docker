@@ -1,4 +1,4 @@
-# Docker Teamspeak3 Server
+# Docker CouchPotato
 
 This is a Dockerfile to deploy CouchPotato Server.
 
