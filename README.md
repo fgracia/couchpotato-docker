@@ -30,3 +30,7 @@ You will juste have to adapt data volumes and then run :
 ```
 docker-compose up -d
 ```
+
+## Build the image
+
+If you want to build the Docker image by your own, you can run the script build.sh.
