@@ -13,15 +13,15 @@ RUN apt-get update && \
 # Cleaning apt cache
 RUN apt-get clean
 
-WORKDIR /opt
+# App installation
+ADD CouchPotatoServer /opt/CouchPotatoServer
 
-# Cloning CouchPotato sources
-RUN git clone https://github.com/CouchPotato/CouchPotatoServer.git
-
-# Adding t411 provider
+# Creating custom_plugins folder
 RUN mkdir -p /root/.couchpotato/custom_plugins
+
+# Copying T411 plugin in a special directory, will be then copied in mounted /root/.couchpotato/custom_plugins when the app will starts
 RUN mkdir -p /root/custom_plugins
-COPY ./tmp/t411 /root/custom_plugins/t411
+ADD ./t411 /root/custom_plugins/
 
 # Adding startup script
 COPY ./startup.sh /startup.sh
