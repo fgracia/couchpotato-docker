@@ -20,7 +20,8 @@ RUN git clone https://github.com/CouchPotato/CouchPotatoServer.git
 
 # Adding t411 provider
 RUN mkdir -p /root/.couchpotato/custom_plugins
-COPY ./tmp/t411 /root/.couchpotato/custom_plugins/t411
+RUN mkdir -p /root/custom_plugins
+COPY ./tmp/t411 /root/custom_plugins/t411
 
 # Adding startup script
 COPY ./startup.sh /startup.sh
